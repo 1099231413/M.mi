@@ -178,11 +178,13 @@
     float: left;
     box-sizing: border-box;
 }
-.life li:nth-child(1),.life li:nth-child(5){
-    width: 5rem;
+.life li:nth-child(1),.life li:nth-child(5),
+.cheap li:nth-child(3),.cheap li:nth-child(5){
+    width: 33.333%;
 }
-.life li:nth-child(2),.life li:nth-child(4){
-    width: 10rem;
+.life li:nth-child(2),.life li:nth-child(4),
+.cheap li:nth-child(2),.cheap li:nth-child(4){
+    width: 66.667%;
 }
 .life li:nth-child(3) .price p:nth-child(2),
 .cheap li:nth-child(1) .price p:nth-child(2){
@@ -194,14 +196,14 @@
     color: #FF6600;
 }
 .cheap li:nth-child(1){
-    width: 15rem;
+    width: 100%;
 }
 .cheap li:nth-child(2),.cheap li:nth-child(4){
-    width: 10rem;
+    /*width: 10rem;*/
     padding-right: .05rem;
 }
 .cheap li:nth-child(3),.cheap li:nth-child(5){
-    width: 5rem;
+    /*width: 5rem;*/
     padding-left: .05rem;
 }
 /*<!--新家必备-->*/
@@ -212,17 +214,17 @@
     padding-left: .05rem;
 }
 .necessary li:nth-child(3){
-    width: 15rem;
+    width: 100%;
 }
 .necessary li:nth-child(1),.necessary li:nth-child(5){
-    width: 10rem;
+    width: 66.667%;
 }
 .necessary li:nth-child(2),.necessary li:nth-child(4){
-    width: 5rem;
+    width: 33.333%;
 }
 /*<!--手机好伴侣-->*/
 .iPhone li:last-of-type{
-    width: 15rem;
+    width: 100%;
     padding: 0;
 }
 .iPhone li:last-of-type .price p,
@@ -245,7 +247,7 @@
 }
 /*<!--爱宝宝-->*/
 .baby li:first-of-type{
-    width: 15rem;
+    width: 100%;
     padding: 0;
 }
 .baby li:nth-child(2){
@@ -264,19 +266,6 @@
 .nav li:nth-child(1) a{
     color: #FF5722;
 }
-/*.nav li:nth-child(2) div{*/
-    /*background: url("../images/spr1_5b2e09c.png") no-repeat 0 -4rem;*/
-    /*background-size: 100% auto;*/
-/*}*/
-/*.nav li:nth-child(3) div{*/
-    /*background: url("../images/spr1_5b2e09c.png") no-repeat 0 -2.4rem;*/
-    /*background-size: 100% auto;*/
-/*}*/
-/*.nav li:nth-child(4) div{*/
-    /*background: url("../images/spr1_5b2e09c.png") no-repeat 0 -5.6rem;*/
-    /*background-size: 100% auto;*/
-/*}*/
-
 
 
 

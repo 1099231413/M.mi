@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/*css初始化*/ 
+body, article, aside, blockquote, button, code, dd, dialog, div, dl, dt, fieldset, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, input, legend, li, nav, ol, p, pre, section, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+    -o-tap-highlight-color: transparent;
+}
+body{
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color:#333;
+    background: #fff;
+}
+a {
+    /*display: block;*/
+    text-decoration: none;
+    color: #333;
+}
+ul, li {
+    list-style: none;
+}
+em, i {
+    font-style: normal
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+input, button, textarea, select{
+    outline-style: none;
+    border: none;
+}
+input, button ,img ,a{
+    outline-style: none;
+    border: none;
+}
+a{
+    display: block;
+}
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+@media screen and (min-width:320px) {
+    html {
+        font-size: 21.33px
+    }
+    body {
+        font-size: 12px
+    }
+}
+@media screen and (min-width:375px) {
+    html {
+        font-size: 25px
+    }
+    body {
+        font-size: 12px
+    }
+}
+@media screen and (min-width:414px) {
+    html {
+        font-size: 27.6px
+    }
+    body {
+        font-size: 14px
+    }
+}
+@media screen and (min-width:640px) {
+    html {
+        font-size: 42.666px
+    }
+    body {
+        font-size: 17.28px
+    }
+}
+/*清除浮动*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.ct {
+    text-align: center !important;
+}
+
+/*<!--固定导航栏-->**/
+.nav{
+    position: fixed;
+    bottom: 0;
+    width: 15rem;
+    background: #fff;
+}
+.nav li{
+    width: 3.75rem;
+    float: left;
+    text-align: center;
+}
+.nav li a{
+    color: #999;
+    font-size: .5rem;
+    padding: .14rem 0;
+}
+.nav li div{
+    width: .8rem;
+    height: .8rem;
+    margin: 0 auto;
+}
+.nav li:nth-child(1) div{
+    background: url("../images/spr1_5b2e09c.png") no-repeat 0 -.8rem;
+    background-size: 100% auto;
+}
+.nav li:nth-child(2) div{
+    background: url("../images/spr1_5b2e09c.png") no-repeat 0 -4rem;
+    background-size: 100% auto;
+}
+.nav li:nth-child(3) div{
+    background: url("../images/spr1_5b2e09c.png") no-repeat 0 -2.4rem;
+    background-size: 100% auto;
+}
+.nav li:nth-child(4) div{
+    background: url("../images/spr1_5b2e09c.png") no-repeat 0 -5.6rem;
+    background-size: 100% auto;
+}

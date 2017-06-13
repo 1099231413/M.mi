@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小米商城-小米官方网站，小米手机、红米手机正品专卖</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/swiper-3.2.5.min.css">
+    <script src="js/swiper-3.2.5.min.js"></script>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script>
+        $(function(){
+//            <!--广告文字滚动-->
+            setInterval(function(){
+                var h = $(".strip_txt ul").height()/5.6;
+                console.log(h);
+                $(".strip_txt ul").animate({"marginTop":-h},500,function(){
+                    $(this).css({marginTop : "0px"}).find("li:first").appendTo(this);
+                });
+            },1500);
+//            <!--滚动改变头部背景颜色-->
+            $(window).scroll(function(){
+                var w = $(window).scrollTop();
+                var h = $(".banner1").height();
+                bg = 1;
+                if(w < h ){
+                    bg = bg*(w/h);
+                    $(".head").css("background","rgba(229,131,53,"+ bg +")");
+                }else{
+                    bg = 1;
+                    $(".head").css("background","rgba(229,131,53,1)");
+                }
+            });
+//          <!--回到顶部-->
+            $(window).scroll(function(){
+                var w = $(window).scrollTop();
+                var x = $(".banner1").height()*2;
+                var y = $(".cells").height()+x;
+                console.log(w);
+                if(w >= y){
+                    $(".fixed").show();
+                }else{
+                    $(".fixed").hide();
+                }
+            });
+            $(".fixed").click(function(){
+                $("body").animate({scrollTop:0},200);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="main">
+        <!--回到顶部-->
+        <div class="fixed">
+            <img src="images/top_1a2bcd9.png" alt="">
+        </div>
+        <!--头部-->
+        <div class="head">
+            <img src="images/logo_e6453b2.png" alt="">
+            <a href="#">
+                <span>搜索商品名称</span>
+            </a>
+            <div>登录</div>
+        </div>
+        <!--轮播图-->
+        <div class="swiper-container banner1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/6deace61-538b-c5a7-7803-8068b0d79514.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/459f9c2b-607f-f044-19ed-d4e1e1192d22.webp" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <script>
+            var swiper = new Swiper('.banner1', {
+                pagination: '.swiper-pagination',
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                loop: true,
+                paginationClickable: true,
+                centeredSlides: true,
+                autoplay: 2000,
+                autoplayDisableOnInteraction: false
+            });
+        </script>
+        <!--广告-->
+        <div class="strip">
+            <img class="fl" src="images/sczb_ed0a4af.png" alt="">
+            <div class="strip_txt fl">
+                <ul>
+                    <li>1、高考后暑假怎么过？开始规划吧！</li>
+                    <li>2、高考后暑假怎么过？开始规划吧！</li>
+                    <li>3、高考后暑假怎么过？开始规划吧！</li>
+                    <li>4、高考后暑假怎么过？开始规划吧！</li>
+                    <li>5、高考后暑假怎么过？开始规划吧！</li>
+                    <li>6、高考后暑假怎么过？开始规划吧！</li>
+                </ul>
+            </div>
+        </div>
+        <!--背景颜色-->
+        <div style="height: .4rem;background: #F5F5F5"></div>
+        <!--优惠-->
+        <div class="cells">
+            <ul class="clearfix">
+                <li><img src="images/16e0bb1c-10a0-d75c-685c-ef85785afe69.webp" alt=""></li>
+                <li><img src="images/9027987925caaf72139a6d861df88c8c.jpg" alt="">
+                    <img src="images/4d4d4abc-2bca-9bf8-82c7-67847ac4c038.webp" alt=""></li>
+                <li><img src="images/de34b029-e079-add3-ccb1-e5d4102a1ecf.webp" alt=""></li>
+            </ul>
+        </div>
+        <!--明星单品-->
+        <div class="star">
+            <img src="images/a956ab1c-cb63-84e0-0185-9bb191228559.webp" alt="">
+            <ul class="clearfix">
+                <li><a href="#">
+                    <img src="images/ef72ec83-30b3-911a-e24a-4888e5bbc83a.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/7efcf812-c343-3e09-e978-f9bdbc801522.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/233d8d26-0400-fc1b-af5f-ed1878079973.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/c843ebae-4a6d-c5a9-3964-10e7ca50e8d6.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/7737cbb7-e873-8cf9-1f85-9fabb6c35da5.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/58ba30f1-ea54-73a9-5782-1ef2988a2827.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+            </ul>
+            <p class="ct">更多新品 ></p>
+        </div>
+        <!--米家智能-->
+        <div class="star home">
+            <div style="height: .4rem;background: #F5F5F5"></div>
+            <img src="images/1579b910-1ec1-1b40-ecdb-72f5eeab275e.webp" alt="">
+            <div style="height: .4rem;background: #F5F5F5"></div>
+            <img src="images/6cc739d8-ae51-779a-3707-2f1d20a558bf.webp" alt="">
+            <ul class="clearfix">
+                <li><a href="#">
+                    <img src="images/a4c8c780-acbd-23c7-6ae2-f1abe5e5d34d.webp" alt="">
+                </a></li>
+                <li><a href="#">
+                    <div class="price">
+                        <p>小蚁微单相机M1</p>
+                        <p>高画质易操作 小白也能轻松专业摄影</p>
+                        <p>¥2999</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <div class="price">
+                        <p>米家插线板6位 </p>
+                        <p>新国标1mm²线材，多重保护更安全</p>
+                        <p>¥79</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/d957c655-e038-f809-83fe-5effee992656.webp" alt="">
+                </a></li>
+                <li><a href="#">
+                    <img src="images/cd606494-7ad5-c900-a722-bb69661fed21.webp" alt="">
+                </a></li>
+                <li><a href="#">
+                    <div class="price">
+                        <p>Yeelight智能灯泡</p>
+                        <p>亮度自由调节，WiFi远程操作，节能护眼</p>
+                        <p>¥99</p>
+                    </div>
+                </a></li>
+            </ul>
+            <p class="ct">更多米家智能产品 ></p>
+        </div>
+        <!--学习办公-->
+        <div class="star hot">
+            <ul class="clearfix">
+                <li><a href="#">
+                    <img src="images/46c44f3e-479d-a999-dd2d-98fb39b51e17.webp" alt="">
+                </a></li>
+                <li><a href="#">
+                    <img src="images/d55778b9-7144-2d36-1450-694b8a47b9db.webp" alt="">
+                </a></li>
+                <li><a href="#">
+                    <img src="images/8cfcd654-4af5-9ae6-c6cc-1ba9d28be8e8.webp" alt="">
+                </a></li>
+                <li><a href="#">
+                    <img src="images/9b87efa9-910a-1dcb-e09a-49f33b1c7655.webp" alt="">
+                </a></li>
+                <li><a href="#">
+                    <img src="images/52866372-7fe5-76c2-29a0-9ae32d07b8ff.webp" alt="">
+                </a></li>
+                <li><a href="#">
+                    <img src="images/b79cb907-3ae4-2a35-6756-b243b386a95a.webp" alt="">
+                </a></li>
+            </ul>
+            <img src="images/e95ade2750a7fde92369b416c7d3176d.jpg" alt="">
+            <ul class="clearfix">
+                <li><a href="#">
+                    <img src="images/ef72ec83-30b3-911a-e24a-4888e5bbc83a.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/7efcf812-c343-3e09-e978-f9bdbc801522.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/233d8d26-0400-fc1b-af5f-ed1878079973.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/c843ebae-4a6d-c5a9-3964-10e7ca50e8d6.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/7737cbb7-e873-8cf9-1f85-9fabb6c35da5.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/58ba30f1-ea54-73a9-5782-1ef2988a2827.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+        <div style="height: .4rem;background: #F5F5F5"></div>
+        <!--品质生活-->
+        <div class="life">
+            <img src="images/6cd3540241dc0cf9a36177d69f5be23e.png" alt="">
+            <ul class="clearfix">
+                <li><img src="images/a9a60451-e443-2938-a603-b9db91b46fc9.webp" alt="">
+                    <div class="price">
+                        <p>声波</p>
+                        <p>¥4799</p>
+                    </div>
+                </li>
+                <li><img src="images/2ee90dc8-d3c2-adfc-c709-c927ff1e1db0.webp" alt="">
+                    <div class="price">
+                        <p>小米无人机4K版</p>
+                        <p>¥4799</p>
+                    </div>
+                </li>
+                <li><img src="images/ef72ec83-30b3-911a-e24a-4888e5bbc83a.webp" alt="">
+                    <div class="price">
+                        <div class="clearfix">
+                            <span class="fl">小米笔记本Air13.3英寸</span>
+                            <span class="fr">¥4999</span>
+                        </div>
+                        <p>全金属超薄机身搭配独显</p>
+                    </div>
+                </li>
+                <li><img src="images/3446e197-3747-6bec-3277-b0be305418a7.webp" alt="">
+                    <div class="price">
+                        <p>Yeelight智能灯泡</p>
+                        <p>¥4799</p>
+                    </div>
+                </li>
+                <li><img src="images/0bd304b8-8710-11fe-a657-7727d25794bd.webp" alt="">
+                    <div class="price">
+                        <p>小米万能遥控器</p>
+                        <p>¥4799</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div style="height: .4rem;background: #F5F5F5"></div>
+        <!--便宜好用的小物-->
+        <div class="life cheap">
+            <img src="images/5ac4631284e38119a0d81164b6aef65e.png" alt="">
+            <ul class="clearfix">
+                <li>
+                    <img src="images/21da5518-d5c3-5de7-84b8-afca9446ef93.webp" alt="">
+                    <div class="price">
+                        <div class="clearfix">
+                            <span class="fl">小米活塞耳机 清新版</span>
+                            <span class="fr">¥29</span>
+                        </div>
+                        <p>铝合金音腔 ，精密金属工艺光感雅致</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/f71c486b-bafa-4dcf-0c68-56aff8f3f5df.webp" alt="">
+                    <div class="price">
+                        <p>小米体重秤</p>
+                        <p>¥99</p>
+                    </div>
+                </li>
+                <li><img src="images/d48b3788-0518-c515-2c49-3bef35b6f7ca.webp" alt="">
+                    <div class="price">
+                        <p>小米体重秤</p>
+                        <p>¥99</p>
+                    </div>
+                </li>
+                <li><img src="images/8f8eeced-884b-a0f1-4667-2a98781300ba.webp" alt="">
+                    <div class="price">
+                        <p>小米净水器</p>
+                        <p>¥1999</p>
+                    </div>
+                </li>
+                <li><img src="images/3c866ab8-1795-23d6-78ae-eacc29f81cd2.webp" alt="">
+                    <div class="price">
+                        <p>小米盒子3 增强版 </p>
+                        <p>¥399</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div style="height: .4rem;background: #F5F5F5"></div>
+        <!--新家必备-->
+        <div class="life necessary">
+            <img src="images/810f5f06b0427e3af4f7d614e3429336.png" alt="">
+            <ul class="clearfix">
+                <li>
+                    <img src="images/02cd9384-e53b-eace-eca1-27db57a2367a.webp" alt="">
+                    <div class="price">
+                        <p>小米体脂秤</p>
+                        <p>¥199</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/c6019250-b731-698a-691f-d7291605c869.webp" alt="">
+                    <div class="price">
+                        <p>小米体重秤</p>
+                        <p>¥99</p>
+                    </div>
+                </li>
+                <li><img src="images/1ef4e430-b65a-2655-791a-680a49668005.webp" alt="">
+                    <div class="price">
+                        <div class="clearfix">
+                            <span class="fl">小米移动电源2 10000mAh</span>
+                            <span class="fr">¥79</span>
+                        </div>
+                        <p>双向快充，仅 14.1mm 薄，高密度锂聚合物电芯</p>
+                    </div>
+                </li>
+                <li><img src="images/6f19ca85-2326-8e80-0ecc-16134c33a89b.webp" alt="">
+                    <div class="price">
+                        <p>小米净水器</p>
+                        <p>¥1999</p>
+                    </div>
+                </li>
+                <li><img src="images/e379dfc8-663a-b791-1d45-8cca3e580904.webp" alt="">
+                    <div class="price">
+                        <p>小米盒子3 增强版 </p>
+                        <p>¥399</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div style="height: .4rem;background: #F5F5F5"></div>
+        <!--手机好伴侣-->
+        <div class="star iPhone">
+            <img src="images/de07689d2ea6f7c55ece59966566e74a.png" alt="">
+            <ul class="clearfix">
+                <li><a href="#">
+                    <img src="images/101a66b1bc98cee8b1f7848e9840fa28.jpg" alt="">
+                    <div class="price">
+                        <p>小米手机6</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥2899</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/beef0019-2bfb-cba6-54cc-4063592d15aa.webp" alt="">
+                    <div class="price">
+                        <p>小米MIX 256GB</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥3999</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/233d8d26-0400-fc1b-af5f-ed1878079973.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/c843ebae-4a6d-c5a9-3964-10e7ca50e8d6.webp" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>多彩金属/超长续航</p>
+                        <p>¥4799</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/fe9844e4-7a89-267a-ec8b-156fc55b8058.webp" alt="">
+                    <div class="price">
+                        <div class="clearfix">
+                            <span class="fl">小米5s Plus 标准高透贴膜</span>
+                            <span class="fr">¥19</span>
+                        </div>
+                        <p>标准高透贴膜，适用于小米5s Plus</p>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+        <div style="height: .4rem;background: #F5F5F5"></div>
+        <!--爱宝宝-->
+        <div class="star baby">
+            <img src="images/bca06e3b333b413795a08ffcf63a7a51.png" alt="">
+            <ul class="clearfix">
+                <li><a href="#">
+                    <img src="images/51cb366f-c6a2-5767-053d-633c1c5a5f1c.webp" alt="">
+                    <div class="price">
+                        <div class="clearfix">
+                            <span class="fl">米兔智能故事机</span>
+                            <span class="fr">¥199</span>
+                        </div>
+                        <p>海量好故事，智能语音交互，材质安全耐用</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/0e60f6a8-225d-ca42-4ec6-59f98b8a8c75.webp" alt="">
+                    <div class="price">
+                        <p>特别版声波</p>
+                        <p>为中国粉丝量身定制</p>
+                        <p>¥169</p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/da4c2b91-097d-da67-bf48-b37b6a6f793f.webp" alt="">
+                    <div class="price">
+                        <p>米兔积木机器人</p>
+                        <p>978个零件，手机智能遥控</p>
+                        <p>¥499</p>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+        <div style="height: 2rem;"></div>
+        <!--固定导航栏-->
+        <div class="nav">
+            <ul>
+                <li><a href="./index.html">
+                    <div></div>
+                    <p>首页</p>
+                </a></li>
+                <li><a href="./product.html">
+                    <div></div>
+                    <p>分类</p>
+                </a></li>
+                <li><a href="./cart.html">
+                    <div></div>
+                    <p>购物车</p>
+                </a></li>
+                <li><a href="./user.html">
+                    <div></div>
+                    <p>我的</p>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

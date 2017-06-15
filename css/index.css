@@ -27,7 +27,7 @@
     left: .5rem;
     top: .55rem;
 }
-.head a{
+.head > a{
     position: absolute;
     height: 1.1rem;
     line-height: 1.1rem;
@@ -46,9 +46,11 @@
     position: absolute;
     right: .4rem;
     font-size: .6rem;
-    color: #fff;
 
 }
+.head div a{
+     color: #fff;
+ }
 /*<!--广告-->*/
 .strip{
     height: 1.65rem;
@@ -57,6 +59,10 @@
 }
 .strip img{
     width: 3.3rem;
+}
+.strip span{
+    line-height: 1.65rem;
+    color: #b2b2b2;
 }
 .strip_txt{
     width: 10rem;
@@ -67,8 +73,8 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     padding-left: .4rem;
-    margin: .45rem 0 .45rem .4rem;
-    border-left: 1px solid #b2b2b2;
+    margin: .45rem 0 .45rem .1rem;
+    /*border-left: 1px solid #b2b2b2;*/
 }
 /*<!--优惠-->*/
 .cells li{

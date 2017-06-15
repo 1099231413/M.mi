@@ -1,0 +1,155 @@
+@charset "UTF-8";
+.wei{
+    width: 68px;
+    height: 68px;
+    background: url("../images/ercode_hover.png") no-repeat;
+    position: absolute;
+    right: 0;
+}
+.login{
+    position: absolute;
+    left: 0;
+    right:0;
+    top: 0;
+    bottom: 0;
+    background: #eee;
+    box-sizing: border-box;
+}
+.login form p:nth-child(1){
+    width: 2rem;
+    height: 2rem;
+    background: #ef5b00;
+    margin: 0 auto;
+    margin-top: 1.8rem;
+}
+.login form h2{
+    font-size: .8rem;
+    padding-top: .8rem;
+    padding-bottom: 1rem;
+}
+.login form input{
+    width: 80%;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    padding-left: .5rem;
+    font-size: .62rem;
+}
+.login form .user{
+    border-bottom: 1px solid #eee;
+}
+.login form .submit{
+    background: #33B4FF;
+    color: #fff;
+    padding-left: 0rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+/*<!--其他登录方式-->*/
+.other fieldset{
+    margin-left: 10%;
+    margin-right: 10%;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 1px dashed #bdbdbd;
+    color: #b0b0b0;
+    font-size: .5rem;
+}
+.link{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: .8rem;
+    text-align: -webkit-center;
+    text-align: center;
+}
+.link li{
+    display: inline-block;
+}
+.link li a{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.link li:nth-child(1) a{
+    background: url("../images/iconstype_wap.png") no-repeat;
+    background-position: 4% 0;
+    background-size: cover;
+    background-color: #0288D1;
+}
+.link li:nth-child(2) a{
+    background: url("../images/iconstype_wap.png") no-repeat;
+    background-position: 35% 0;
+    background-size: cover;
+    background-color: #D32F2F;
+}
+.link li:nth-child(3) a{
+    background: url("../images/iconstype_wap.png") no-repeat;
+    background-position: 64% 0;
+    background-size: cover;
+    background-color: #00AAEE;
+}
+/*<!--注册-->*/
+.register{
+    text-align: center;
+}
+.register span{
+    color: #e0e0e0;
+    font-size: .5rem;
+    margin: .2rem;
+}
+.register a{
+    display: inline-block;
+    color: #757575;
+    font-size: .5rem;
+    padding-top: 1rem;
+}
+.word-link span{
+    color: #757575;
+    margin: 0 .4rem;
+}
+.word-link a{
+    font-size: .5rem;
+    display: inline-block;
+    padding-top: 1.6rem;
+    padding-bottom: .8rem;
+}
+
+.login > p.ct{
+    color: #757575;
+    font-size: .5rem;
+}
+.login > p.ct a{
+    display: initial;
+    color: #757575;
+    font-size: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

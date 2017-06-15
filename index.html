@@ -20,7 +20,7 @@
                 $(".strip_txt ul").animate({"marginTop":-h},500,function(){
                     $(this).css({marginTop : "0px"}).find("li:first").appendTo(this);
                 });
-            },1500);
+            },2000);
 //            <!--滚动改变头部背景颜色-->
             $(window).scroll(function(){
                 var w = $(window).scrollTop();
@@ -61,10 +61,10 @@
         <!--头部-->
         <div class="head">
             <img src="images/logo_e6453b2.png" alt="">
-            <a href="#">
+            <a href="./search.html">
                 <span>搜索商品名称</span>
             </a>
-            <div>登录</div>
+            <div><a href="./login.html">登录</a></div>
         </div>
         <!--轮播图-->
         <div class="swiper-container banner1">
@@ -93,6 +93,7 @@
         <!--广告-->
         <div class="strip">
             <img class="fl" src="images/sczb_ed0a4af.png" alt="">
+            <span class="fl">|</span>
             <div class="strip_txt fl">
                 <ul>
                     <li>1、高考后暑假怎么过？开始规划吧！</li>

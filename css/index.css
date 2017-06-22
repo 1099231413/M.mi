@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body{
+    min-width: 320px;   /*屏幕最小宽度*/
+    max-width: 640px;   /*屏幕最大宽度*/
+}
 /*<!--回到顶部-->*/
 .fixed{
     width: 1.4rem;

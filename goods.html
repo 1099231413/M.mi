@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小米商城-小米官方网站，小米手机、红米手机正品专卖</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/goods.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/swiper-3.2.5.min.css">
+    <script src="js/swiper-3.2.5.min.js"></script>
+    <script src="js/jquery2.0.0.min.js"></script>
+    <script>
+        $(function(){
+            var time;
+//          <!--回到顶部-->
+            $(window).scroll(function(){
+                var w = $(window).scrollTop();
+                var x = $(".banner1").height()*2;
+                var y = $(".cells").height()+x;
+                console.log(w);
+                if(w >= y){
+                    $(".fixed").show();
+                }else{
+                    $(".fixed").hide();
+                }
+            });
+            $(".fixed").click(function(){
+                $("body").animate({scrollTop:0},200);
+            });
+
+//            选项点击弹窗
+            $(".elastic").click(function(){
+                $(".popup").show();
+                $(".popup_fixed").animate({bottom: 0},300);
+                //点击选项加入购物车
+                $(".addCart").click(function(){
+                    clearInterval(time);
+                    $(".cart").show();
+                    $(".popup_fixed").animate({bottom: -16+"rem"},0,function(){
+                        $(".popup").hide();
+                    });
+                    time = setInterval(function(){
+                        $(".cart").hide();
+                    },1500);
+                });
+            });
+            //点击确认跳转
+            $(".buyNow").click(function(){
+                location.href = "./login.html";
+            });
+
+//            点击窗口隐藏
+            $(".closes").click(function(){
+                $(".popup_fixed").animate({bottom: -16+"rem"},300,function(){
+                    $(".popup").hide();
+                });
+                $(".popup2_fixed").animate({bottom: -16+"rem"},300,function(){
+                    $(".popup2").hide();
+                });
+            })
+//            点击跳转
+            $(".region").click(function(){
+                location.href = "./login.html";
+            })
+
+//            点击加入购车弹出窗口
+            $(".fo_addCart").click(function(){
+                $(".popup2").show();
+                $(".popup2_fixed").animate({bottom: 0 },300);
+                //点击确认加入购物车
+                $(".ensure").click(function(){
+                    clearInterval(time);
+                    $(".cart").show();
+                    $(".popup2_fixed").animate({bottom: -16+"rem"},0,function(){
+                        $(".popup2").hide();
+                    });
+                    time = setInterval(function(){
+                        $(".cart").hide();
+                    },1500);
+                });
+            });
+
+//            点击购买弹出窗口
+            $(".fo_buyNow").click(function(){
+                $(".popup2").show();
+                $(".popup2_fixed").animate({bottom: 0 },300);
+                //点击确认跳转
+                $(".ensure").click(function(){
+                    location.href = "./login.html";
+                });
+            });
+//            颜色选择
+            $(".type_bot1 span").click(function(){
+                $(this).addClass("active").siblings("span").removeClass("active");
+            });
+            $(".type_bot1 span:eq(0)").click(function(){
+                $(".type_bot img").attr("src","images/6b07876b-5b5b-5039-4762-2b49d3200ef3.webp.png");
+            });
+            $(".type_bot1 span:eq(1)").click(function(){
+                $(".type_bot img").attr("src","images/56ed638d-c9fe-666d-e8e3-a19a538b920f.webp.png");
+            });
+            $(".type_foot1 span:eq(0)").click(function(){
+                $(".type_foot img").attr("src","images/6b07876b-5b5b-5039-4762-2b49d3200ef3.webp.png");
+            });
+            $(".type_foot1 span:eq(1)").click(function(){
+                $(".type_foot img").attr("src","images/56ed638d-c9fe-666d-e8e3-a19a538b920f.webp.png");
+            });
+//            html字体大小
+            function FontSize(){
+                var w = $("html").width();
+                $("html").css("font-size", w / 14.4+"px");
+            }
+            window.onload=function(){
+                FontSize();
+            }
+            window.onresize=function(){
+                FontSize();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="goods">
+        <!--回到顶部-->
+        <div class="fixed">
+            <img src="images/top_1a2bcd9.png" alt="">
+        </div>
+        <!--轮播图-->
+        <div class="swiper-container banner1">
+            <div class="goods-view">
+                <a href="./index.html"><img class="left" src="images/back_48bef14.png" alt=""></a>
+                <img class="right" src="images/share_18c55d7.png" alt="">
+            </div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/fd2cd614-2aea-f34d-c7d5-903deea6cfaa.webp.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/b66aa8ad-6b4c-add1-b50d-cf5d85af0896.webp.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/c00dc5b6-704f-bcef-7073-6fd1d6f7e1ee.webp.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination" style="right: 50%;margin-right: -25px"></div>
+        </div>
+        <script>
+            var swiper = new Swiper('.banner1', {
+                pagination: '.swiper-pagination',
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                loop: true,
+                paginationClickable: true,
+                centeredSlides: true,
+                autoplay: 3000,
+                autoplayDisableOnInteraction: false
+            });
+        </script>
+        <!--标题-->
+        <div class="title">
+            <h2>小米笔记本 Air 12.5英寸 i5 8G 256G 银色</h2>
+            <p>轻薄金属机身 / 超长续航，支持1C快充 / intel酷睿i5处理器 / 8GB内存+256GB SSD / FHD 全贴合屏幕</p>
+            <div>¥4999</div>
+        </div>
+        <!--选购-->
+        <div class="choose elastic clearfix">
+            <div class="fl">
+                <p>已选</p>
+                <div>小米笔记本 Air 12.5英寸 i5 8G 256G 银色 x1</div>
+            </div>
+            <div class="fr">
+                <span class="iconfont icon-202-copy"></span>
+            </div>
+        </div>
+        <!--背景颜色-->
+        <div style="height: .4rem;background: #F5F5F5"></div>
+        <!--分期-->
+        <div class="stages clearfix">
+            <div class="fl">
+                <p>促销</p>
+                <div>可分期</div>
+            </div>
+            <div class="fr">
+                <span class="iconfont icon-202-copy"></span>
+            </div>
+        </div>
+        <!--背景颜色-->
+        <div style="height: .4rem;background: #F5F5F5"></div>
+        <!--区域-->
+        <div class="choose region clearfix">
+            <div class="fl">
+                <p style="color: #333;"><img style="width: 10px;margin-right: 10px" src="images/gps_90d5f88.png" alt="">北京北京市东城区永定门外街道</p>
+                <div style="margin-left: 20px;color: #f56600;">有现货</div>
+            </div>
+            <div class="fr">
+                <span class="iconfont icon-202-copy"></span>
+            </div>
+        </div>
+        <!--背景颜色-->
+        <div style="height: .4rem;background: #F5F5F5"></div>
+        <!--选购配件-->
+        <div class="choose parts clearfix">
+            <div class="fl">
+                <p>选购配件</p>
+                <div>鼠标、转接器</div>
+            </div>
+            <div class="fr">
+                <span class="iconfont icon-202-copy"></span>
+            </div>
+        </div>
+        <!--背景颜色-->
+        <div style="height: .4rem;background: #F5F5F5"></div>
+        <!--用户评论-->
+        <div class="comment">
+            <div class="user clearfix">
+                <span class="fl">用户评价(36)</span>
+                <span class="fr">查看全部评价<i class="fr iconfont icon-202-copy"></i></span>
+            </div>
+            <div class="name clearfix">
+                <img class="fl" src="images/L4hEUUUzC9SfPY_90.jpg" alt="">
+                <div class="fl">
+                    <span>涅虚</span>
+                    <br>
+                    <span>2017-05-29</span>
+                </div>
+            </div>
+            <div class="conten">
+                <p>真的特别好，小米是品质与性价比的保证。国产有小米，中国有好企！赞+1</p>
+                <div class="img">
+                    <img src="images/233d8d26-0400-fc1b-af5f-ed1878079973.webp.png" alt="">
+                    <img src="images/233d8d26-0400-fc1b-af5f-ed1878079973.webp.png" alt="">
+                    <img src="images/233d8d26-0400-fc1b-af5f-ed1878079973.webp.png" alt="">
+                </div>
+                <div class="reply">
+                    <span>官方回复：</span>
+                    感谢您对小米的支持与肯定，我们会加倍努力带给米粉们更好的产品，小米祝您生活愉快、家庭幸福^ ^
+                </div>
+            </div>
+        </div>
+        <!--背景颜色-->
+        <div style="height: .4rem;background: #F5F5F5"></div>
+        <div class="parameter">
+            <ul>
+                <li>概述</li>
+                <li>参数</li>
+            </ul>
+            <img src="images/1bfc1d33-5170-8e6e-76fa-963273b3266e.webp.png" alt="">
+            <img src="images/62f8f8f7-c6e3-4ee7-c296-e25cdf250ac3.webp.png" alt="">
+            <img src="images/8703b579-e3e8-5481-5828-75213d1bba4f.webp.png" alt="">
+            <a href="#">查看全部图文详情 ></a>
+        </div>
+        <!--背景颜色-->
+        <div style="height: .4rem;background: #F5F5F5"></div>
+        <!--为你推荐-->
+        <div class="groom">
+            <h2>为你推荐</h2>
+            <ul class="clearfix">
+                <li><a href="#">
+                    <img src="images/233d8d26-0400-fc1b-af5f-ed1878079973.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/7efcf812-c343-3e09-e978-f9bdbc801522.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/233d8d26-0400-fc1b-af5f-ed1878079973.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/c843ebae-4a6d-c5a9-3964-10e7ca50e8d6.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/7737cbb7-e873-8cf9-1f85-9fabb6c35da5.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/58ba30f1-ea54-73a9-5782-1ef2988a2827.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/dd4e70d66276839ed73d9a9b897d4859.jpg" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/d957c655-e038-f809-83fe-5effee992656.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/b17838bc-dc82-754b-83a7-4c229550c8ef.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/13bd4c6106f7cf53a3d779340b180be6.jpg" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <!---->
+                <li><a href="#">
+                    <img src="images/7a20086a-90ef-31d2-79c3-d2223bafe6c0.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/6411c848-8ff9-1cbc-ede5-b46593788ea2.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/beef0019-2bfb-cba6-54cc-4063592d15aa.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/909aafaa-cba9-e2ad-4ce2-ff9466724a37.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/d75f9b00-1d7f-7256-0bb7-0efdf2b3ff4f.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/7dbf5a5a3a0f51b02bfabe1b8a3e8000.jpg" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/233d8d26-0400-fc1b-af5f-ed1878079973.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/656a5863-6af1-6302-4e36-a33bd49e45cb.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/4730b800-80a7-8ce3-1cd6-be442c3f1cad.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/beb1f30e-7a73-2598-f750-2d7a987ef446.webp.png" alt="">
+                    <div class="price">
+                        <p>13.3" 笔记本 标准版</p>
+                        <p>¥4799<span>¥4999</span> </p>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+        <div style="height: 2rem;"></div>
+        <!--底部固定-->
+        <div class="foot_fixed">
+            <ul>
+                <li><a href="./index.html">
+                    <div></div>
+                    首页</a></li>
+                <li><a href="./cart.html">
+                    <div></div>
+                    购物车</a></li>
+                <li><a href="#" class="fo_addCart">加入购物车</a></li>
+                <li><a href="#" class="fo_buyNow">立即购买</a></li>
+            </ul>
+        </div>
+        <!--弹窗-->
+        <div class="cart ct">
+            <img src="images/dui_b061f7c.png" alt="">
+            <p>成功加入购物车&nbsp;!</p>
+        </div>
+        <div class="popup">
+            <div class="popup_fixed">
+                <div class="close"></div>
+                <div class="type clearfix">
+                    <div class="type_bot">
+                        <div class="fl"><img src="images/6b07876b-5b5b-5039-4762-2b49d3200ef3.webp.png" alt=""></div>
+                        <div>
+                            <span>¥4999</span>
+                            <p>笔记本 Air 12.5英寸 i5 8G 256G 银色</p>
+                        </div>
+                        <div class="closes"></div>
+                    </div>
+                    <div class="type_bot1">
+                        <p>颜色</p>
+                        <span class="active"><img src="images/6b07876b-5b5b-5039-4762-2b49d3200ef3.webp.png" alt="">金色</span>
+                        <span><img src="images/56ed638d-c9fe-666d-e8e3-a19a538b920f.webp.png" alt="">银色</span>
+                    </div>
+                    <div class="type_bot2">
+                        通用
+                    </div>
+                    <div class="type_bot3 clearfix">
+                        <div class="fl spec">购买数量</div>
+                        <div class="fr addNum">
+                            <span class="fl"></span>
+                            <span class="fl">1</span>
+                            <span class="fl"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase clearfix">
+                    <span class="addCart">加入购物车</span>
+                    <span class="buyNow">立即购买</span>
+                </div>
+            </div>
+        </div>
+        <div class="popup2">
+            <div class="popup2_fixed">
+                <div class="close"></div>
+                <div class="type clearfix">
+                    <div class="type_foot type_bot">
+                        <div class="fl"><img src="images/6b07876b-5b5b-5039-4762-2b49d3200ef3.webp.png" alt=""></div>
+                        <div>
+                            <span>¥4999</span>
+                            <p>笔记本 Air 12.5英寸 i5 8G 256G 银色</p>
+                        </div>
+                        <div class="closes"></div>
+                    </div>
+                    <div class="type_foot1 type_bot1">
+                        <p>颜色</p>
+                        <span class="active"><img src="images/6b07876b-5b5b-5039-4762-2b49d3200ef3.webp.png" alt="">金色</span>
+                        <span><img src="images/56ed638d-c9fe-666d-e8e3-a19a538b920f.webp.png" alt="">银色</span>
+                    </div>
+                    <div class="type_foot2">
+                        通用
+                    </div>
+                    <div class="type_foot3 clearfix">
+                        <div class="fl spec">购买数量</div>
+                        <div class="fr addNum">
+                            <span class="fl"></span>
+                            <span class="fl">1</span>
+                            <span class="fl"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase clearfix">
+                    <span class="ensure">确定</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

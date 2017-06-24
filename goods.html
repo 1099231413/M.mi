@@ -11,115 +11,6 @@
     <link rel="stylesheet" href="css/swiper-3.2.5.min.css">
     <script src="js/swiper-3.2.5.min.js"></script>
     <script src="js/jquery2.0.0.min.js"></script>
-    <script>
-        $(function(){
-            var time;
-//          <!--回到顶部-->
-            $(window).scroll(function(){
-                var w = $(window).scrollTop();
-                var x = $(".banner1").height()*2;
-                var y = $(".cells").height()+x;
-                console.log(w);
-                if(w >= y){
-                    $(".fixed").show();
-                }else{
-                    $(".fixed").hide();
-                }
-            });
-            $(".fixed").click(function(){
-                $("body").animate({scrollTop:0},200);
-            });
-
-//            选项点击弹窗
-            $(".elastic").click(function(){
-                $(".popup").show();
-                $(".popup_fixed").animate({bottom: 0},300);
-                //点击选项加入购物车
-                $(".addCart").click(function(){
-                    clearInterval(time);
-                    $(".cart").show();
-                    $(".popup_fixed").animate({bottom: -16+"rem"},0,function(){
-                        $(".popup").hide();
-                    });
-                    time = setInterval(function(){
-                        $(".cart").hide();
-                    },1500);
-                });
-            });
-            //点击确认跳转
-            $(".buyNow").click(function(){
-                location.href = "./login.html";
-            });
-
-//            点击窗口隐藏
-            $(".closes").click(function(){
-                $(".popup_fixed").animate({bottom: -16+"rem"},300,function(){
-                    $(".popup").hide();
-                });
-                $(".popup2_fixed").animate({bottom: -16+"rem"},300,function(){
-                    $(".popup2").hide();
-                });
-            })
-//            点击跳转
-            $(".region").click(function(){
-                location.href = "./login.html";
-            })
-
-//            点击加入购车弹出窗口
-            $(".fo_addCart").click(function(){
-                $(".popup2").show();
-                $(".popup2_fixed").animate({bottom: 0 },300);
-                //点击确认加入购物车
-                $(".ensure").click(function(){
-                    clearInterval(time);
-                    $(".cart").show();
-                    $(".popup2_fixed").animate({bottom: -16+"rem"},0,function(){
-                        $(".popup2").hide();
-                    });
-                    time = setInterval(function(){
-                        $(".cart").hide();
-                    },1500);
-                });
-            });
-
-//            点击购买弹出窗口
-            $(".fo_buyNow").click(function(){
-                $(".popup2").show();
-                $(".popup2_fixed").animate({bottom: 0 },300);
-                //点击确认跳转
-                $(".ensure").click(function(){
-                    location.href = "./login.html";
-                });
-            });
-//            颜色选择
-            $(".type_bot1 span").click(function(){
-                $(this).addClass("active").siblings("span").removeClass("active");
-            });
-            $(".type_bot1 span:eq(0)").click(function(){
-                $(".type_bot img").attr("src","images/6b07876b-5b5b-5039-4762-2b49d3200ef3.webp.png");
-            });
-            $(".type_bot1 span:eq(1)").click(function(){
-                $(".type_bot img").attr("src","images/56ed638d-c9fe-666d-e8e3-a19a538b920f.webp.png");
-            });
-            $(".type_foot1 span:eq(0)").click(function(){
-                $(".type_foot img").attr("src","images/6b07876b-5b5b-5039-4762-2b49d3200ef3.webp.png");
-            });
-            $(".type_foot1 span:eq(1)").click(function(){
-                $(".type_foot img").attr("src","images/56ed638d-c9fe-666d-e8e3-a19a538b920f.webp.png");
-            });
-//            html字体大小
-            function FontSize(){
-                var w = $("html").width();
-                $("html").css("font-size", w / 14.4+"px");
-            }
-            window.onload=function(){
-                FontSize();
-            }
-            window.onresize=function(){
-                FontSize();
-            }
-        });
-    </script>
 </head>
 <body>
     <div class="goods">
@@ -421,7 +312,6 @@
         </div>
         <div class="popup">
             <div class="popup_fixed">
-                <div class="close"></div>
                 <div class="type clearfix">
                     <div class="type_bot">
                         <div class="fl"><img src="images/6b07876b-5b5b-5039-4762-2b49d3200ef3.webp.png" alt=""></div>
@@ -442,9 +332,9 @@
                     <div class="type_bot3 clearfix">
                         <div class="fl spec">购买数量</div>
                         <div class="fr addNum">
-                            <span class="fl"></span>
-                            <span class="fl">1</span>
-                            <span class="fl"></span>
+                            <span class="fl addNum_span1"></span>
+                            <span class="fl addNum_span2">1</span>
+                            <span class="fl addNum_span3"></span>
                         </div>
                     </div>
                 </div>
@@ -456,7 +346,6 @@
         </div>
         <div class="popup2">
             <div class="popup2_fixed">
-                <div class="close"></div>
                 <div class="type clearfix">
                     <div class="type_foot type_bot">
                         <div class="fl"><img src="images/6b07876b-5b5b-5039-4762-2b49d3200ef3.webp.png" alt=""></div>
@@ -477,9 +366,9 @@
                     <div class="type_foot3 clearfix">
                         <div class="fl spec">购买数量</div>
                         <div class="fr addNum">
-                            <span class="fl"></span>
-                            <span class="fl">1</span>
-                            <span class="fl"></span>
+                            <span class="fl addNum_span1"></span>
+                            <span class="fl addNum_span2">1</span>
+                            <span class="fl addNum_span3"></span>
                         </div>
                     </div>
                 </div>
@@ -488,6 +377,262 @@
                 </div>
             </div>
         </div>
+        <!--选购配件-->
+        <div class="chooseparts">
+            <div class="chooseparts_fixed">
+                <div class="type">
+                    <h2 class="ct">选购配件</h2>
+                    <div class="closes"></div>
+                    <div class="mouse">
+                        <div class="mouse_one clearfix">
+                            <a href="#"><img src="images/46445a00-3a3c-2d83-d4aa-7f06d4510c92.webp.png" alt=""></a>
+                            <div class="tie">
+                                <a href="#">
+                                    <p>小米便携鼠标 银色</p>
+                                    <p>阳极氧化铝合金外壳+ABS材质 / 蓝牙或2.4G双模式 / 轻薄便携</p>
+                                </a>
+                                <div class="clearfix">
+                                    <div class="fl">¥49</div>
+                                    <div class="fr">
+                                        <div class="fl left_reduce">
+                                            <span class="fl reduce"></span>
+                                            <span class="fl number">1</span>
+                                        </div>
+                                        <div class="fl right_plus">
+                                            <span class="fl plus"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mouse_one clearfix">
+                            <a href="#"><img src="images/f2e24686-cbf7-b5ee-b764-d1fc6a25321c.webp.png" alt=""></a>
+                            <div class="tie">
+                                <a href="#">
+                                    <p>小米无线鼠标 黑色</p>
+                                    <p>2.4G高速传输 / 1200dpi 精准定位 / 一键“后退”* / 耐脏亲肤涂层 / 人体工学设计 </p>
+                                </a>
+                                <div class="clearfix">
+                                    <div class="fl">¥69</div>
+                                    <div class="fr">
+                                        <div class="fl left_reduce">
+                                            <span class="fl reduce"></span>
+                                            <span class="fl number">1</span>
+                                        </div>
+                                        <div class="fl right_plus">
+                                            <span class="fl plus"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mouse_one clearfix">
+                            <a href="#"><img src="images/46445a00-3a3c-2d83-d4aa-7f06d4510c92.webp.png" alt=""></a>
+                            <div class="tie">
+                                <a href="#">
+                                    <p>小米便携鼠标 银色</p>
+                                    <p>阳极氧化铝合金外壳+ABS材质 / 蓝牙或2.4G双模式 / 轻薄便携</p>
+                                </a>
+                                <div class="clearfix">
+                                    <div class="fl">¥49</div>
+                                    <div class="fr">
+                                        <div class="fl left_reduce">
+                                            <span class="fl reduce"></span>
+                                            <span class="fl number">1</span>
+                                        </div>
+                                        <div class="fl right_plus">
+                                            <span class="fl plus"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="purchase clearfix">
+                    <span class="ensure">加入购物车</span>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
+<script>
+    $(function(){
+//          <!--回到顶部-->
+        $(window).scroll(function(){
+            var w = $(window).scrollTop();
+            var x = $(".banner1").height()*2;
+            var y = $(".cells").height()+x;
+            console.log(w);
+            if(w >= y){
+                $(".fixed").show();
+            }else{
+                $(".fixed").hide();
+            }
+        });
+        $(".fixed").click(function(){
+            $("body").animate({scrollTop:0},200);
+        });
+        var time;
+//            选项点击弹窗
+        $(".elastic").click(function(){
+            $(".popup").show();
+            $(".popup_fixed").animate({bottom: 0},300);
+            //点击选项加入购物车
+            $(".addCart").click(function(){
+                clearInterval(time);
+                $(".cart").show();
+                $(".popup_fixed").animate({bottom: -16+"rem"},0,function(){
+                    $(".popup").hide();
+                });
+                time = setInterval(function(){
+                    $(".cart").hide();
+                },1000);
+            });
+            //点击确认跳转
+            $(".buyNow").click(function(){
+                location.href = "./login.html";
+            });
+        });
+        var a = 1;
+        $(".addNum_span3").click(function(){
+            if(a < 10){
+                $(".addNum_span2").html(a+=1);
+                $(".addNum_span1").css("opacity","1");
+            }else{
+                $(this).css("opacity",".3");
+            }
+        });
+        $(".addNum_span1").click(function(){
+            if(a > 1){
+                $(".addNum_span3").css("opacity","1");
+                $(".addNum_span2").html(a-=1);
+            }else{
+                $(this).css("opacity",".3");
+            }
+        });
+//            点击选购配件
+        $(".parts").click(function(){
+            $(".chooseparts").show();
+            $(".chooseparts_fixed").animate({bottom: 0},300);
+            $(".ensure").click(function(){
+                clearInterval(time);
+                $(".cart").show();
+                $(".chooseparts_fixed").animate({bottom: -16+"rem"},300,function(){
+                    $(".chooseparts").hide();
+                });
+                time = setInterval(function(){
+                    $(".cart").hide();
+                },1000)
+            });
+        });
+        var i = 0;
+        $(".plus").click(function(){
+            if(i == 5){
+                $(this).css({"background-image": "url(images/3612b7c.png)"});
+            }else{
+                $(this).parent(".right_plus").siblings(".left_reduce").show().children(".number").html(i+=1);
+            }
+        });
+        $(".reduce").click(function(){
+            if(i == 1){
+                $(".left_reduce").hide();
+            }else{
+                $(this).parent(".left_reduce").siblings(".right_plus").children(".plus").css({"background-image": "url(images/8341968.png)"});
+                $(this).next(".number").html(i-=1);
+            }
+        });
+//            点击隐藏窗口
+        $(".closes").click(function(){
+            $(".popup_fixed").animate({bottom: -16+"rem"},300,function(){
+                $(".popup").hide();
+            });
+            $(".popup2_fixed").animate({bottom: -16+"rem"},300,function(){
+                $(".popup2").hide();
+            });
+            $(".chooseparts_fixed").animate({bottom: -16+"rem"},300,function(){
+                $(".chooseparts").hide();
+            });
+        })
+//            点击区域跳转
+        $(".region").click(function(){
+            location.href = "./login.html";
+        })
+//            点击加入购车弹出窗口
+        $(".fo_addCart").click(function(){
+            $(".popup2").show();
+            $(".popup2_fixed").animate({bottom: 0 },300);
+            //点击确认加入购物车
+            $(".ensure").click(function(){
+                clearInterval(time);
+                $(".cart").show();
+                $(".popup2_fixed").animate({bottom: -16+"rem"},0,function(){
+                    $(".popup2").hide();
+                });
+                time = setInterval(function(){
+                    $(".cart").hide();
+                },1000);
+            });
+        });
+//            点击购买弹出窗口
+        $(".fo_buyNow").click(function(){
+            $(".popup2").show();
+            $(".popup2_fixed").animate({bottom: 0 },300);
+            //点击确认跳转
+            $(".ensure").click(function(){
+                location.href = "./login.html";
+            });
+        });
+//            颜色选择
+        $(".type_bot1 span").click(function(){
+            $(this).addClass("active").siblings("span").removeClass("active");
+        });
+        $(".type_bot1 span:eq(0)").click(function(){
+            $(".type_bot img").attr("src","images/6b07876b-5b5b-5039-4762-2b49d3200ef3.webp.png");
+        });
+        $(".type_bot1 span:eq(1)").click(function(){
+            $(".type_bot img").attr("src","images/56ed638d-c9fe-666d-e8e3-a19a538b920f.webp.png");
+        });
+        $(".type_foot1 span:eq(0)").click(function(){
+            $(".type_foot img").attr("src","images/6b07876b-5b5b-5039-4762-2b49d3200ef3.webp.png");
+        });
+        $(".type_foot1 span:eq(1)").click(function(){
+            $(".type_foot img").attr("src","images/56ed638d-c9fe-666d-e8e3-a19a538b920f.webp.png");
+        });
+//            html字体大小
+        function FontSize(){
+            var w = $("html").width();
+            $("html").css("font-size", w / 14.4+"px");
+        }
+        window.onload=function(){
+            FontSize();
+        }
+        window.onresize=function(){
+            FontSize();
+        }
+    });
+</script>
+<script>
+//    var number = document.querySelector(".number");
+//    var plus = document.querySelector(".plus");
+//    var reduce = document.querySelector(".reduce");
+//    var left_reduce = document.querySelector(".left_reduce");
+//    var i = 0;
+//    plus.onclick = function(){
+//        if(i < 5){
+//            left_reduce.style.display = "block";
+//            number.innerHTML = ++i;
+//        }else{
+//            plus.style.backgroundImage = "URL(images/1_3612b7c.png)";
+//        }
+//    }
+//    reduce.onclick = function(){
+//        if(i >= 1){
+//            number.innerHTML = --i;
+//            plus.style.backgroundImage = "URL(images/8341968.png)";
+//        }else{
+//            left_reduce.style.display = "none";
+//        }
+//    }
+</script>
